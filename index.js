@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 'use strict';
 var cmail = require('./cmail')({
-  config_file: ',/config.json',
-  token_file: ',/token.json',
-});
-var querystring = require('querystring');
-var readline = require('readline-sync');
-var request = require('request');
+      config_file: ',/config.json',
+      token_file: ',/token.json',
+    }),
+    querystring = require('querystring'),
+    readline = require('readline-sync'),
+    request = require('request');
 
 if (process.argv[2] === 'auth') {
   var uri = cmail.get_auth_url();
